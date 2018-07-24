@@ -1,0 +1,1169 @@
+08-07-2018 19:18:20.591 [http-nio-8080-exec-4] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: {
+  "nameOnCard": "hgv",
+  "cardNumber": "6455",
+  "cardExpiryDate": "2018-12",
+  "securityCode": "213"
+}
+08-07-2018 19:18:27.952 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [/selfpaidgrocerysystem] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.selfpaidgrocerysystemservices.controller.SelfCheckoutController.postPaymentDetails(SelfCheckoutController.java:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:875)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:780)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:976)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:879)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:853)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:112)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:24:45.857 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 9706 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+08-07-2018 21:24:45.876 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-07-2018 21:24:45.912 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c2375a9: startup date [Sun Jul 08 21:24:45 EDT 2018]; root of context hierarchy
+08-07-2018 21:24:46.718 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f8fc468f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+08-07-2018 21:24:46.989 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-07-2018 21:24:47.003 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:24:47.011 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-07-2018 21:24:47.012 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+08-07-2018 21:24:47.016 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+08-07-2018 21:24:47.174 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+08-07-2018 21:24:47.175 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1265 ms
+08-07-2018 21:24:47.225 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-07-2018 21:24:47.228 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-07-2018 21:24:47.229 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-07-2018 21:24:47.229 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-07-2018 21:24:47.229 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-07-2018 21:24:47.702 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-02-fv0zm.mongodb.net:27017, cluster0-shard-00-00-fv0zm.mongodb.net:27017, cluster0-shard-00-01-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+08-07-2018 21:24:47.703 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:24:47.725 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:24:47.801 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:24:48.059 [cluster-ClusterId{value='5b42b95faa35b025ea787de9', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:24:48.059 [cluster-ClusterId{value='5b42b95faa35b025ea787de9', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:24:48.060 [cluster-ClusterId{value='5b42b95faa35b025ea787de9', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:24:48.486 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-07-2018 21:24:48.488 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+08-07-2018 21:24:48.494 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+08-07-2018 21:24:48.500 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+08-07-2018 21:24:48.509 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:24:48.526 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+08-07-2018 21:24:48.541 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+08-07-2018 21:24:48.545 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 2.93 seconds (JVM running for 4.358)
+08-07-2018 21:25:29.639 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08-07-2018 21:25:29.641 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+08-07-2018 21:25:29.648 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+08-07-2018 21:25:29.776 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.handleHttpMessageNotReadable - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.sql.Date` from String "2018-12": not a valid representation (error: Failed to parse Date value '2018-12': Cannot parse date "2018-12": while it seems to fit format 'yyyy-MM-dd', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.sql.Date` from String "2018-12": not a valid representation (error: Failed to parse Date value '2018-12': Cannot parse date "2018-12": while it seems to fit format 'yyyy-MM-dd', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 4, column: 21] (through reference chain: com.selfpaidgrocerysystemservices.dto.Payment["cardExpiryDate"])
+08-07-2018 21:25:59.205 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.handleHttpMessageNotReadable - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.sql.Date` from String "2018-12": not a valid representation (error: Failed to parse Date value '2018-12': Cannot parse date "2018-12": while it seems to fit format 'yyyy-MM-dd', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.sql.Date` from String "2018-12": not a valid representation (error: Failed to parse Date value '2018-12': Cannot parse date "2018-12": while it seems to fit format 'yyyy-MM-dd', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 4, column: 21] (through reference chain: com.selfpaidgrocerysystemservices.dto.Payment["cardExpiryDate"])
+08-07-2018 21:31:15.178 [http-nio-8080-exec-4] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: apple
+08-07-2018 21:31:15.199 [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-07-2018 21:31:15.439 [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-07-2018 21:31:15.455 [http-nio-8080-exec-4] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":1.6,"QUANTITY":1,"WEIGHT":1.3,"NAME":"Apple"}
+08-07-2018 21:31:38.062 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.handleHttpMessageNotReadable - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.sql.Date` from String "2019-12": not a valid representation (error: Failed to parse Date value '2019-12': Cannot parse date "2019-12": while it seems to fit format 'yyyy-MM-dd', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.sql.Date` from String "2019-12": not a valid representation (error: Failed to parse Date value '2019-12': Cannot parse date "2019-12": while it seems to fit format 'yyyy-MM-dd', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 4, column: 21] (through reference chain: com.selfpaidgrocerysystemservices.dto.Payment["cardExpiryDate"])
+08-07-2018 21:33:20.643 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 9738 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+08-07-2018 21:33:20.663 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-07-2018 21:33:20.700 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1187c9e8: startup date [Sun Jul 08 21:33:20 EDT 2018]; root of context hierarchy
+08-07-2018 21:33:49.944 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 9740 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+08-07-2018 21:33:49.963 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-07-2018 21:33:50.002 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@600b90df: startup date [Sun Jul 08 21:33:49 EDT 2018]; root of context hierarchy
+08-07-2018 21:33:50.831 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5361c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+08-07-2018 21:33:51.076 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-07-2018 21:33:51.090 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:33:51.099 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-07-2018 21:33:51.100 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+08-07-2018 21:33:51.116 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+08-07-2018 21:33:51.250 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+08-07-2018 21:33:51.251 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1252 ms
+08-07-2018 21:33:51.301 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-07-2018 21:33:51.305 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-07-2018 21:33:51.305 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-07-2018 21:33:51.306 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-07-2018 21:33:51.306 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-07-2018 21:33:51.743 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-00-fv0zm.mongodb.net:27017, cluster0-shard-00-01-fv0zm.mongodb.net:27017, cluster0-shard-00-02-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+08-07-2018 21:33:51.744 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:33:51.766 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:33:51.840 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:33:52.066 [cluster-ClusterId{value='5b42bb7faa35b0260cbb660f', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:33:52.066 [cluster-ClusterId{value='5b42bb7faa35b0260cbb660f', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:33:52.066 [cluster-ClusterId{value='5b42bb7faa35b0260cbb660f', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:33:52.502 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-07-2018 21:33:52.504 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+08-07-2018 21:33:52.511 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+08-07-2018 21:33:52.516 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+08-07-2018 21:33:52.525 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:33:52.543 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+08-07-2018 21:33:52.559 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+08-07-2018 21:33:52.564 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 2.863 seconds (JVM running for 3.844)
+08-07-2018 21:34:25.371 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08-07-2018 21:34:25.372 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+08-07-2018 21:34:25.378 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+08-07-2018 21:34:37.153 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.memberIdValidator - Inside memberIdValidator
+08-07-2018 21:34:37.153 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.memberIdValidator - Member ID Received: 1234
+08-07-2018 21:34:45.065 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-07-2018 21:34:45.257 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-07-2018 21:34:48.158 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.memberIdValidator - Is MemberValid: false
+08-07-2018 21:34:48.159 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.memberIdValidator - End of memberIdValidator
+08-07-2018 21:35:01.022 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: apple
+08-07-2018 21:35:01.027 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":1.6,"QUANTITY":1,"WEIGHT":1.3,"NAME":"Apple"}
+08-07-2018 21:35:28.663 [http-nio-8080-exec-4] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@e41d79
+08-07-2018 21:35:38.901 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [/selfpaidgrocerysystem] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.selfpaidgrocerysystemservices.controller.SelfCheckoutController.postPaymentDetails(SelfCheckoutController.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:875)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:780)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:976)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:879)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:853)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:112)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:40:29.191 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+08-07-2018 21:40:29.239 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@600b90df: startup date [Sun Jul 08 21:33:49 EDT 2018]; root of context hierarchy
+08-07-2018 21:40:29.242 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.s.DefaultLifecycleProcessor.stop - Stopping beans in phase 2147483647
+08-07-2018 21:40:29.243 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+08-07-2018 21:40:29.244 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+08-07-2018 21:40:29.247 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+08-07-2018 21:48:01.346 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 9750 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+08-07-2018 21:48:01.363 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-07-2018 21:48:01.472 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1187c9e8: startup date [Sun Jul 08 21:48:01 EDT 2018]; root of context hierarchy
+08-07-2018 21:48:02.359 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$41827429] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+08-07-2018 21:48:02.655 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-07-2018 21:48:02.670 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:48:02.679 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-07-2018 21:48:02.680 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+08-07-2018 21:48:02.707 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+08-07-2018 21:48:02.774 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+08-07-2018 21:48:02.775 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1307 ms
+08-07-2018 21:48:02.825 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-07-2018 21:48:02.828 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-07-2018 21:48:02.829 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-07-2018 21:48:02.829 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-07-2018 21:48:02.829 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-07-2018 21:48:03.423 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-01-fv0zm.mongodb.net:27017, cluster0-shard-00-02-fv0zm.mongodb.net:27017, cluster0-shard-00-00-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+08-07-2018 21:48:03.424 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:48:03.536 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:48:03.538 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:48:03.912 [cluster-ClusterId{value='5b42bed3aa35b0261646ffa2', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:48:03.912 [cluster-ClusterId{value='5b42bed3aa35b0261646ffa2', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:48:03.912 [cluster-ClusterId{value='5b42bed3aa35b0261646ffa2', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:48:04.357 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-07-2018 21:48:04.359 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+08-07-2018 21:48:04.365 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+08-07-2018 21:48:04.371 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+08-07-2018 21:48:04.380 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:48:04.400 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+08-07-2018 21:48:04.419 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+08-07-2018 21:48:04.424 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 3.349 seconds (JVM running for 4.983)
+08-07-2018 21:48:11.706 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08-07-2018 21:48:11.707 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+08-07-2018 21:48:11.714 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+08-07-2018 21:48:11.783 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.memberIdValidator - Inside memberIdValidator
+08-07-2018 21:48:11.786 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.memberIdValidator - Member ID Received: 1234
+08-07-2018 21:48:11.795 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-07-2018 21:48:11.991 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-07-2018 21:48:12.004 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.memberIdValidator - Is MemberValid: false
+08-07-2018 21:48:12.005 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.memberIdValidator - End of memberIdValidator
+08-07-2018 21:48:18.877 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+08-07-2018 21:48:18.882 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+08-07-2018 21:48:20.361 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: apple
+08-07-2018 21:48:20.363 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":1.6,"QUANTITY":1,"WEIGHT":1.3,"NAME":"Apple"}
+08-07-2018 21:48:21.541 [http-nio-8080-exec-4] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: bread
+08-07-2018 21:48:21.566 [http-nio-8080-exec-4] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":1.7,"QUANTITY":1,"WEIGHT":2.7,"NAME":"Bread"}
+08-07-2018 21:48:22.959 [http-nio-8080-exec-5] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: orange
+08-07-2018 21:48:22.962 [http-nio-8080-exec-5] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":6.4,"QUANTITY":1,"WEIGHT":6.3,"NAME":"Orange"}
+08-07-2018 21:49:14.806 [http-nio-8080-exec-7] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@4656690
+08-07-2018 21:49:54.952 [http-nio-8080-exec-7] INFO  o.s.b.f.xml.XmlBeanDefinitionReader.loadBeanDefinitions - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+08-07-2018 21:49:55.118 [http-nio-8080-exec-7] INFO  o.s.j.support.SQLErrorCodesFactory.<init> - SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+08-07-2018 21:51:33.293 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+08-07-2018 21:51:33.315 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1187c9e8: startup date [Sun Jul 08 21:48:01 EDT 2018]; root of context hierarchy
+08-07-2018 21:51:33.318 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.s.DefaultLifecycleProcessor.stop - Stopping beans in phase 2147483647
+08-07-2018 21:51:33.319 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+08-07-2018 21:51:33.319 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+08-07-2018 21:51:33.323 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+08-07-2018 21:55:39.718 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 9754 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+08-07-2018 21:55:39.722 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-07-2018 21:55:39.759 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60129b9a: startup date [Sun Jul 08 21:55:39 EDT 2018]; root of context hierarchy
+08-07-2018 21:55:40.589 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4aacb807] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+08-07-2018 21:55:40.875 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-07-2018 21:55:40.890 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:55:40.898 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-07-2018 21:55:40.899 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+08-07-2018 21:55:40.903 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+08-07-2018 21:55:40.996 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+08-07-2018 21:55:40.996 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1239 ms
+08-07-2018 21:55:41.045 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-07-2018 21:55:41.049 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-07-2018 21:55:41.050 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-07-2018 21:55:41.050 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-07-2018 21:55:41.050 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-07-2018 21:55:41.674 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-00-fv0zm.mongodb.net:27017, cluster0-shard-00-01-fv0zm.mongodb.net:27017, cluster0-shard-00-02-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+08-07-2018 21:55:41.674 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:55:41.780 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:55:41.783 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:55:42.001 [cluster-ClusterId{value='5b42c09daa35b0261a1fe4c4', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:55:42.001 [cluster-ClusterId{value='5b42c09daa35b0261a1fe4c4', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:55:42.003 [cluster-ClusterId{value='5b42c09daa35b0261a1fe4c4', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:55:42.483 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-07-2018 21:55:42.486 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+08-07-2018 21:55:42.491 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+08-07-2018 21:55:42.496 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+08-07-2018 21:55:42.508 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:55:42.526 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+08-07-2018 21:55:42.542 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+08-07-2018 21:55:42.547 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 3.074 seconds (JVM running for 4.172)
+08-07-2018 21:56:47.055 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08-07-2018 21:56:47.068 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+08-07-2018 21:56:47.074 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+08-07-2018 21:56:51.728 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@5de652a2
+08-07-2018 21:56:56.920 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-07-2018 21:56:57.120 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-07-2018 21:56:57.192 [http-nio-8080-exec-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader.loadBeanDefinitions - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+08-07-2018 21:56:57.240 [http-nio-8080-exec-1] INFO  o.s.j.support.SQLErrorCodesFactory.<init> - SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+08-07-2018 21:57:46.171 [http-nio-8080-exec-1] INFO  c.s.d.j.r.i.PaymentJdbcRepositoryImpl.postPaymentDetails - Exception occured in PaymentJdbcRepositoryImpl:postPaymentDetails method
+08-07-2018 21:57:46.188 [http-nio-8080-exec-1] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 21:58:02.593 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@1125b2e8
+08-07-2018 21:58:13.073 [http-nio-8080-exec-2] INFO  c.s.d.j.r.i.PaymentJdbcRepositoryImpl.postPaymentDetails - Exception occured in PaymentJdbcRepositoryImpl:postPaymentDetails method
+08-07-2018 21:58:24.824 [http-nio-8080-exec-2] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 21:59:17.321 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 9755 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+08-07-2018 21:59:17.326 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-07-2018 21:59:17.366 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b3f61ff: startup date [Sun Jul 08 21:59:17 EDT 2018]; root of context hierarchy
+08-07-2018 21:59:18.214 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8bab8bb3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+08-07-2018 21:59:18.477 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-07-2018 21:59:18.491 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:59:18.500 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-07-2018 21:59:18.500 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+08-07-2018 21:59:18.504 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+08-07-2018 21:59:18.647 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+08-07-2018 21:59:18.648 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1284 ms
+08-07-2018 21:59:18.698 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-07-2018 21:59:18.702 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-07-2018 21:59:18.702 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-07-2018 21:59:18.702 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-07-2018 21:59:18.702 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-07-2018 21:59:19.134 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-00-fv0zm.mongodb.net:27017, cluster0-shard-00-01-fv0zm.mongodb.net:27017, cluster0-shard-00-02-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+08-07-2018 21:59:19.135 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:59:19.237 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:59:19.238 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 21:59:19.450 [cluster-ClusterId{value='5b42c177aa35b0261baf1fe0', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:59:19.450 [cluster-ClusterId{value='5b42c177aa35b0261baf1fe0', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:59:19.450 [cluster-ClusterId{value='5b42c177aa35b0261baf1fe0', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 21:59:19.942 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-07-2018 21:59:19.945 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+08-07-2018 21:59:19.952 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+08-07-2018 21:59:19.957 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+08-07-2018 21:59:19.968 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+08-07-2018 21:59:19.986 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+08-07-2018 21:59:20.005 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+08-07-2018 21:59:20.011 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 2.933 seconds (JVM running for 4.491)
+08-07-2018 21:59:41.845 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08-07-2018 21:59:41.855 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+08-07-2018 21:59:41.861 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+08-07-2018 21:59:51.877 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@ebea717
+08-07-2018 21:59:54.121 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-07-2018 21:59:54.327 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-07-2018 22:00:02.306 [http-nio-8080-exec-2] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 22:00:40.073 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@49b59ae9
+08-07-2018 22:00:43.605 [http-nio-8080-exec-3] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 22:01:16.139 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 9756 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+08-07-2018 22:01:16.156 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-07-2018 22:01:16.196 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1ef6d34c: startup date [Sun Jul 08 22:01:16 EDT 2018]; root of context hierarchy
+08-07-2018 22:01:17.058 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b477fd7b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+08-07-2018 22:01:17.327 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-07-2018 22:01:17.341 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+08-07-2018 22:01:17.350 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-07-2018 22:01:17.351 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+08-07-2018 22:01:17.370 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+08-07-2018 22:01:17.435 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+08-07-2018 22:01:17.436 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1243 ms
+08-07-2018 22:01:17.484 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-07-2018 22:01:17.487 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-07-2018 22:01:17.488 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-07-2018 22:01:17.488 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-07-2018 22:01:17.488 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-07-2018 22:01:17.897 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-01-fv0zm.mongodb.net:27017, cluster0-shard-00-02-fv0zm.mongodb.net:27017, cluster0-shard-00-00-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+08-07-2018 22:01:17.898 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 22:01:17.921 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 22:01:17.994 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 22:01:18.198 [cluster-ClusterId{value='5b42c1edaa35b0261ca365a3', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 22:01:18.198 [cluster-ClusterId{value='5b42c1edaa35b0261ca365a3', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 22:01:18.198 [cluster-ClusterId{value='5b42c1edaa35b0261ca365a3', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 22:01:18.664 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-07-2018 22:01:18.667 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+08-07-2018 22:01:18.673 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+08-07-2018 22:01:18.680 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+08-07-2018 22:01:18.690 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+08-07-2018 22:01:18.709 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+08-07-2018 22:01:18.731 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+08-07-2018 22:01:18.736 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 2.841 seconds (JVM running for 4.043)
+08-07-2018 22:01:26.086 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08-07-2018 22:01:26.086 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+08-07-2018 22:01:26.092 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+08-07-2018 22:01:28.538 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@61f4e003
+08-07-2018 22:01:30.400 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-07-2018 22:01:30.614 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-07-2018 22:01:41.352 [http-nio-8080-exec-1] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 22:04:45.919 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: apple
+08-07-2018 22:04:45.957 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":1.6,"QUANTITY":1,"WEIGHT":1.3,"NAME":"Apple"}
+08-07-2018 22:05:25.369 [http-nio-8080-exec-4] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@7064446d
+08-07-2018 22:05:25.426 [http-nio-8080-exec-4] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:10:37.181 [http-nio-8080-exec-6] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+08-07-2018 23:10:37.217 [http-nio-8080-exec-6] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+08-07-2018 23:10:41.846 [http-nio-8080-exec-8] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@1580bf24
+08-07-2018 23:10:41.903 [http-nio-8080-exec-8] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:12:08.382 [http-nio-8080-exec-10] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@6da69f94
+08-07-2018 23:12:08.408 [http-nio-8080-exec-10] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:14:48.357 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@483b187f
+08-07-2018 23:14:48.384 [http-nio-8080-exec-2] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:14:51.360 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@58f1d87b
+08-07-2018 23:14:51.406 [http-nio-8080-exec-3] INFO  o.s.b.f.xml.XmlBeanDefinitionReader.loadBeanDefinitions - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+08-07-2018 23:14:51.473 [http-nio-8080-exec-3] INFO  o.s.j.support.SQLErrorCodesFactory.<init> - SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+08-07-2018 23:14:51.481 [http-nio-8080-exec-3] INFO  c.s.d.j.r.i.PaymentJdbcRepositoryImpl.postPaymentDetails - Exception occured in PaymentJdbcRepositoryImpl:postPaymentDetails method
+08-07-2018 23:14:51.482 [http-nio-8080-exec-3] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:15:21.984 [http-nio-8080-exec-4] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@7a9c2f1d
+08-07-2018 23:15:22.011 [http-nio-8080-exec-4] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:17:50.811 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 10054 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+08-07-2018 23:17:50.837 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-07-2018 23:17:50.875 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a47b187: startup date [Sun Jul 08 23:17:50 EDT 2018]; root of context hierarchy
+08-07-2018 23:17:51.781 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$80a0d5e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+08-07-2018 23:17:52.031 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-07-2018 23:17:52.044 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+08-07-2018 23:17:52.053 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-07-2018 23:17:52.053 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+08-07-2018 23:17:52.075 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+08-07-2018 23:17:52.215 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+08-07-2018 23:17:52.216 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1343 ms
+08-07-2018 23:17:52.268 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-07-2018 23:17:52.272 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-07-2018 23:17:52.273 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-07-2018 23:17:52.273 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-07-2018 23:17:52.273 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-07-2018 23:17:52.707 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-02-fv0zm.mongodb.net:27017, cluster0-shard-00-00-fv0zm.mongodb.net:27017, cluster0-shard-00-01-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+08-07-2018 23:17:52.707 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 23:17:52.732 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 23:17:52.818 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 23:17:53.049 [cluster-ClusterId{value='5b42d3e067cac52746fcff51', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 23:17:53.049 [cluster-ClusterId{value='5b42d3e067cac52746fcff51', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 23:17:53.049 [cluster-ClusterId{value='5b42d3e067cac52746fcff51', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 23:17:53.479 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-07-2018 23:17:53.482 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+08-07-2018 23:17:53.488 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+08-07-2018 23:17:53.493 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+08-07-2018 23:17:53.502 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+08-07-2018 23:17:53.520 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+08-07-2018 23:17:53.539 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+08-07-2018 23:17:53.544 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 3.045 seconds (JVM running for 4.3)
+08-07-2018 23:18:11.478 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08-07-2018 23:18:11.504 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+08-07-2018 23:18:11.533 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+08-07-2018 23:18:11.577 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+08-07-2018 23:18:11.586 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-07-2018 23:18:11.775 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-07-2018 23:18:11.787 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+08-07-2018 23:18:26.907 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@4236ee59
+08-07-2018 23:18:26.978 [http-nio-8080-exec-2] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:26:56.063 [http-nio-8080-exec-7] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+08-07-2018 23:26:56.078 [http-nio-8080-exec-7] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+08-07-2018 23:27:08.414 [http-nio-8080-exec-9] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@52042408
+08-07-2018 23:27:08.444 [http-nio-8080-exec-9] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:28:29.347 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: apple
+08-07-2018 23:28:29.368 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":1.6,"QUANTITY":1,"WEIGHT":1.3,"NAME":"Apple"}
+08-07-2018 23:39:33.101 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 10154 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+08-07-2018 23:39:33.350 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-07-2018 23:39:33.388 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1187c9e8: startup date [Sun Jul 08 23:39:33 EDT 2018]; root of context hierarchy
+08-07-2018 23:39:34.299 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fbb6bcc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+08-07-2018 23:39:34.585 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+08-07-2018 23:39:34.601 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+08-07-2018 23:39:34.610 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-07-2018 23:39:34.610 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+08-07-2018 23:39:34.614 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+08-07-2018 23:39:35.181 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+08-07-2018 23:39:35.181 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1795 ms
+08-07-2018 23:39:35.231 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+08-07-2018 23:39:35.235 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+08-07-2018 23:39:35.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+08-07-2018 23:39:35.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+08-07-2018 23:39:35.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+08-07-2018 23:39:35.857 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-01-fv0zm.mongodb.net:27017, cluster0-shard-00-02-fv0zm.mongodb.net:27017, cluster0-shard-00-00-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+08-07-2018 23:39:35.857 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 23:39:35.976 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 23:39:35.978 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+08-07-2018 23:39:36.234 [cluster-ClusterId{value='5b42d8f767cac527aa8b2d1d', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 23:39:36.234 [cluster-ClusterId{value='5b42d8f767cac527aa8b2d1d', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 23:39:36.234 [cluster-ClusterId{value='5b42d8f767cac527aa8b2d1d', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+08-07-2018 23:39:36.701 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+08-07-2018 23:39:36.704 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+08-07-2018 23:39:36.711 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+08-07-2018 23:39:36.719 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+08-07-2018 23:39:36.728 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+08-07-2018 23:39:36.746 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+08-07-2018 23:39:36.788 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+08-07-2018 23:39:36.792 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 3.965 seconds (JVM running for 5.496)
+08-07-2018 23:40:05.376 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08-07-2018 23:40:05.389 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+08-07-2018 23:40:05.396 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+08-07-2018 23:40:05.438 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: apple
+08-07-2018 23:40:05.446 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-07-2018 23:40:05.634 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-07-2018 23:40:05.647 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":1.6,"QUANTITY":1,"WEIGHT":1.3,"NAME":"Apple"}
+08-07-2018 23:41:02.152 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@8256519
+08-07-2018 23:41:05.932 [http-nio-8080-exec-3] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:43:21.684 [http-nio-8080-exec-5] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+08-07-2018 23:43:21.701 [http-nio-8080-exec-5] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+08-07-2018 23:54:40.431 [http-nio-8080-exec-7] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+08-07-2018 23:54:40.460 [http-nio-8080-exec-7] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+08-07-2018 23:54:53.725 [http-nio-8080-exec-9] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@249049dd
+08-07-2018 23:54:53.823 [http-nio-8080-exec-9] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:55:25.068 [http-nio-8080-exec-10] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+08-07-2018 23:55:25.090 [http-nio-8080-exec-10] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+08-07-2018 23:55:39.838 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@3a35c444
+08-07-2018 23:55:39.864 [http-nio-8080-exec-1] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:55:52.631 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+08-07-2018 23:55:52.649 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+08-07-2018 23:56:02.758 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.handleHttpMessageNotReadable - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `long` from String "erwe": not a valid Long value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `long` from String "erwe": not a valid Long value
+ at [Source: (PushbackInputStream); line: 2, column: 17] (through reference chain: com.selfpaidgrocerysystemservices.dto.Payment["cardNumber"])
+08-07-2018 23:56:28.653 [http-nio-8080-exec-4] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@268749a5
+08-07-2018 23:56:28.710 [http-nio-8080-exec-4] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:58:45.039 [http-nio-8080-exec-6] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+08-07-2018 23:58:45.094 [http-nio-8080-exec-6] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+08-07-2018 23:58:54.547 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.handleHttpMessageNotReadable - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `long` from String "hhgvhghg": not a valid Long value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `long` from String "hhgvhghg": not a valid Long value
+ at [Source: (PushbackInputStream); line: 2, column: 17] (through reference chain: com.selfpaidgrocerysystemservices.dto.Payment["cardNumber"])
+08-07-2018 23:59:01.984 [http-nio-8080-exec-8] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@4d1c6804
+08-07-2018 23:59:02.103 [http-nio-8080-exec-8] INFO  o.s.b.f.xml.XmlBeanDefinitionReader.loadBeanDefinitions - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+08-07-2018 23:59:02.162 [http-nio-8080-exec-8] INFO  o.s.j.support.SQLErrorCodesFactory.<init> - SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+08-07-2018 23:59:02.171 [http-nio-8080-exec-8] INFO  c.s.d.j.r.i.PaymentJdbcRepositoryImpl.postPaymentDetails - Exception occured in PaymentJdbcRepositoryImpl:postPaymentDetails method
+08-07-2018 23:59:02.172 [http-nio-8080-exec-8] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+08-07-2018 23:59:30.500 [http-nio-8080-exec-9] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@2e6822ad
+08-07-2018 23:59:30.586 [http-nio-8080-exec-9] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+09-07-2018 00:01:24.543 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.getItemDetails - Item Received: banana
+09-07-2018 00:01:24.561 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.getItemDetails - Response Json: {"PRICE":3.3,"QUANTITY":1,"WEIGHT":8.3,"NAME":"Banana"}
+09-07-2018 00:04:09.370 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+09-07-2018 00:04:09.385 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1187c9e8: startup date [Sun Jul 08 23:39:33 EDT 2018]; root of context hierarchy
+09-07-2018 00:04:09.393 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.s.DefaultLifecycleProcessor.stop - Stopping beans in phase 2147483647
+09-07-2018 00:04:09.394 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+09-07-2018 00:04:09.395 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+09-07-2018 00:04:09.399 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+09-07-2018 00:04:09.406 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+09-07-2018 00:08:20.727 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 10308 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+09-07-2018 00:08:20.744 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+09-07-2018 00:08:20.782 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6cc558c6: startup date [Mon Jul 09 00:08:20 EDT 2018]; root of context hierarchy
+09-07-2018 00:08:21.631 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5e1bc674] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09-07-2018 00:08:21.894 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+09-07-2018 00:08:21.908 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+09-07-2018 00:08:21.916 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+09-07-2018 00:08:21.917 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+09-07-2018 00:08:21.921 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+09-07-2018 00:08:22.064 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+09-07-2018 00:08:22.065 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1284 ms
+09-07-2018 00:08:22.114 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+09-07-2018 00:08:22.118 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+09-07-2018 00:08:22.118 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+09-07-2018 00:08:22.119 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+09-07-2018 00:08:22.119 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+09-07-2018 00:08:22.538 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-02-fv0zm.mongodb.net:27017, cluster0-shard-00-00-fv0zm.mongodb.net:27017, cluster0-shard-00-01-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+09-07-2018 00:08:22.538 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:08:22.562 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:08:22.646 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:08:22.874 [cluster-ClusterId{value='5b42dfb667cac52844c41a44', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:08:22.875 [cluster-ClusterId{value='5b42dfb667cac52844c41a44', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:08:23.347 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+09-07-2018 00:08:23.350 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+09-07-2018 00:08:23.355 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+09-07-2018 00:08:23.360 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+09-07-2018 00:08:23.370 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+09-07-2018 00:08:23.387 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+09-07-2018 00:08:23.407 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+09-07-2018 00:08:23.412 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 2.953 seconds (JVM running for 4.32)
+09-07-2018 00:08:23.790 [cluster-ClusterId{value='5b42dfb667cac52844c41a44', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:08:45.602 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09-07-2018 00:08:45.617 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+09-07-2018 00:08:45.623 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+09-07-2018 00:08:50.084 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@6f899191
+09-07-2018 00:09:43.748 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+09-07-2018 00:09:44.034 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+09-07-2018 00:09:45.524 [http-nio-8080-exec-2] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+09-07-2018 00:10:41.516 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+09-07-2018 00:10:41.539 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6cc558c6: startup date [Mon Jul 09 00:08:20 EDT 2018]; root of context hierarchy
+09-07-2018 00:10:41.542 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.s.DefaultLifecycleProcessor.stop - Stopping beans in phase 2147483647
+09-07-2018 00:10:41.543 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+09-07-2018 00:10:41.544 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+09-07-2018 00:10:41.547 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+09-07-2018 00:10:56.934 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 10311 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+09-07-2018 00:10:56.939 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+09-07-2018 00:10:56.976 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@132e0cc: startup date [Mon Jul 09 00:10:56 EDT 2018]; root of context hierarchy
+09-07-2018 00:10:57.809 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6f4d0541] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09-07-2018 00:10:58.088 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+09-07-2018 00:10:58.102 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+09-07-2018 00:10:58.111 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+09-07-2018 00:10:58.112 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+09-07-2018 00:10:58.116 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+09-07-2018 00:10:58.198 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+09-07-2018 00:10:58.198 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1224 ms
+09-07-2018 00:10:58.248 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+09-07-2018 00:10:58.253 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+09-07-2018 00:10:58.253 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+09-07-2018 00:10:58.254 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+09-07-2018 00:10:58.254 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+09-07-2018 00:10:58.662 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-00-fv0zm.mongodb.net:27017, cluster0-shard-00-01-fv0zm.mongodb.net:27017, cluster0-shard-00-02-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+09-07-2018 00:10:58.663 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:10:58.685 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:10:58.687 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:10:58.982 [cluster-ClusterId{value='5b42e05267cac52847d62c79', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:10:58.982 [cluster-ClusterId{value='5b42e05267cac52847d62c79', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:10:58.982 [cluster-ClusterId{value='5b42e05267cac52847d62c79', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:10:59.516 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+09-07-2018 00:10:59.518 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+09-07-2018 00:10:59.524 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+09-07-2018 00:10:59.529 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+09-07-2018 00:10:59.540 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+09-07-2018 00:10:59.558 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+09-07-2018 00:10:59.581 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+09-07-2018 00:10:59.588 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 2.901 seconds (JVM running for 4.036)
+09-07-2018 00:11:07.174 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09-07-2018 00:11:07.188 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+09-07-2018 00:11:07.196 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+09-07-2018 00:11:10.115 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@5c09753f
+09-07-2018 00:11:20.798 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+09-07-2018 00:11:21.074 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+09-07-2018 00:11:21.456 [http-nio-8080-exec-1] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+09-07-2018 00:11:53.592 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 10317 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+09-07-2018 00:11:53.596 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+09-07-2018 00:11:53.635 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7a67e3c6: startup date [Mon Jul 09 00:11:53 EDT 2018]; root of context hierarchy
+09-07-2018 00:11:54.549 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$acda3de2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09-07-2018 00:11:54.797 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+09-07-2018 00:11:54.811 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+09-07-2018 00:11:54.834 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+09-07-2018 00:11:54.835 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+09-07-2018 00:11:54.839 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+09-07-2018 00:11:54.906 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+09-07-2018 00:11:54.907 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1274 ms
+09-07-2018 00:11:54.956 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+09-07-2018 00:11:54.960 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+09-07-2018 00:11:54.960 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+09-07-2018 00:11:54.960 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+09-07-2018 00:11:54.961 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+09-07-2018 00:11:55.378 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-02-fv0zm.mongodb.net:27017, cluster0-shard-00-00-fv0zm.mongodb.net:27017, cluster0-shard-00-01-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+09-07-2018 00:11:55.379 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:11:55.402 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:11:55.476 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:11:55.688 [cluster-ClusterId{value='5b42e08b67cac5284d6d6b6a', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:11:55.689 [cluster-ClusterId{value='5b42e08b67cac5284d6d6b6a', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:11:55.690 [cluster-ClusterId{value='5b42e08b67cac5284d6d6b6a', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:11:56.186 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+09-07-2018 00:11:56.190 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+09-07-2018 00:11:56.196 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+09-07-2018 00:11:56.201 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+09-07-2018 00:11:56.210 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+09-07-2018 00:11:56.228 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+09-07-2018 00:11:56.246 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+09-07-2018 00:11:56.251 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 2.906 seconds (JVM running for 4.061)
+09-07-2018 00:12:11.767 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09-07-2018 00:12:11.780 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+09-07-2018 00:12:11.788 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+09-07-2018 00:12:15.131 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@527183c1
+09-07-2018 00:12:31.058 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+09-07-2018 00:12:31.293 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+09-07-2018 00:12:31.600 [http-nio-8080-exec-1] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+09-07-2018 00:15:21.529 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarting - Starting SelfpaidGrocerysystemServicesApplication on VijayPeddysiMac.hsd1.ma.comcast.net with PID 10321 (/Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services/target/classes started by VijayPeddy in /Users/VijayPeddy/Desktop/Vijay/Workspace/Sunil_Univ_Project_Workspace/SelfPaidGrocerySystem/selfpaid-grocerysystem-services)
+09-07-2018 00:15:21.546 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+09-07-2018 00:15:21.629 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7393222f: startup date [Mon Jul 09 00:15:21 EDT 2018]; root of context hierarchy
+09-07-2018 00:15:23.469 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$51c588f9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09-07-2018 00:15:24.220 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+09-07-2018 00:15:24.248 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+09-07-2018 00:15:24.266 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+09-07-2018 00:15:24.269 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+09-07-2018 00:15:24.321 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/VijayPeddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+09-07-2018 00:15:24.510 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring embedded WebApplicationContext
+09-07-2018 00:15:24.510 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2884 ms
+09-07-2018 00:15:24.577 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+09-07-2018 00:15:24.597 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+09-07-2018 00:15:24.632 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+09-07-2018 00:15:24.637 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+09-07-2018 00:15:24.640 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+09-07-2018 00:15:25.767 [main] INFO  org.mongodb.driver.cluster.info - Cluster created with settings {hosts=[cluster0-shard-00-01-fv0zm.mongodb.net:27017, cluster0-shard-00-02-fv0zm.mongodb.net:27017, cluster0-shard-00-00-fv0zm.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='Cluster0-shard-0'}
+09-07-2018 00:15:25.767 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-01-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:15:25.874 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-02-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:15:25.878 [main] INFO  org.mongodb.driver.cluster.info - Adding discovered server cluster0-shard-00-00-fv0zm.mongodb.net:27017 to client view of cluster
+09-07-2018 00:15:26.147 [cluster-ClusterId{value='5b42e15d67cac52851754e30', description='null'}-cluster0-shard-00-00-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-00-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:15:26.147 [cluster-ClusterId{value='5b42e15d67cac52851754e30', description='null'}-cluster0-shard-00-01-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-01-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:15:26.581 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+09-07-2018 00:15:26.584 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+09-07-2018 00:15:26.591 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+09-07-2018 00:15:26.596 [main] INFO  o.s.c.s.DefaultLifecycleProcessor.start - Starting beans in phase 2147483647
+09-07-2018 00:15:26.605 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+09-07-2018 00:15:26.623 [main] INFO  o.a.tomcat.util.net.NioSelectorPool.log - Using a shared selector for servlet write/read
+09-07-2018 00:15:26.640 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path '/selfpaidgrocerysystem'
+09-07-2018 00:15:26.646 [main] INFO  c.s.SelfpaidGrocerysystemServicesApplication.logStarted - Started SelfpaidGrocerysystemServicesApplication in 5.85 seconds (JVM running for 7.828)
+09-07-2018 00:15:27.029 [cluster-ClusterId{value='5b42e15d67cac52851754e30', description='null'}-cluster0-shard-00-02-fv0zm.mongodb.net:27017] INFO  org.mongodb.driver.cluster.info - Exception in monitor thread while connecting to server cluster0-shard-00-02-fv0zm.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:87)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:538)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:409)
+	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:281)
+	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:247)
+	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:84)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:34)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:103)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:60)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:119)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114)
+	at java.lang.Thread.run(Thread.java:748)
+09-07-2018 00:16:06.388 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/selfpaidgrocerysystem].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09-07-2018 00:16:06.421 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+09-07-2018 00:16:06.428 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+09-07-2018 00:16:09.608 [http-nio-8080-exec-1] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@f8d8a7a
+09-07-2018 00:16:14.810 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+09-07-2018 00:16:15.051 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+09-07-2018 00:16:15.091 [http-nio-8080-exec-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader.loadBeanDefinitions - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+09-07-2018 00:16:15.143 [http-nio-8080-exec-1] INFO  o.s.j.support.SQLErrorCodesFactory.<init> - SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+09-07-2018 00:16:23.877 [http-nio-8080-exec-1] INFO  c.s.d.j.r.i.PaymentJdbcRepositoryImpl.postPaymentDetails - Exception occured in PaymentJdbcRepositoryImpl:postPaymentDetails method
+09-07-2018 00:16:23.894 [http-nio-8080-exec-1] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+09-07-2018 00:17:01.092 [http-nio-8080-exec-2] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@5a6cddaa
+09-07-2018 00:17:03.679 [http-nio-8080-exec-2] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
+09-07-2018 00:17:35.997 [http-nio-8080-exec-3] INFO  c.s.c.SelfCheckoutController.postPaymentDetails - PaymentDetails Received: com.selfpaidgrocerysystemservices.dto.Payment@31e3b7a7
+09-07-2018 00:17:38.527 [http-nio-8080-exec-3] INFO  c.s.s.impl.PaymentDetailsServiceImpl.postPaymentDetailsToDB - Payment details are inserted into Database
