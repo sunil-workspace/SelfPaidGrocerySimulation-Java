@@ -14,7 +14,7 @@ import com.selfpaidgrocerysystemservices.dto.Item;
 import com.selfpaidgrocerysystemservices.dto.ItemSelected;
 
 @Repository
-public class ItemJdbcRepositoryImpl implements ItemJdbcRepository{
+public class ItemJdbcRepositoryImpl implements ItemJdbcRepository {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -27,9 +27,8 @@ public class ItemJdbcRepositoryImpl implements ItemJdbcRepository{
 
 		List<Item> itemDetails = jdbcTemplate.query("SELECT NAME, PRICE, WEIGHT FROM items_price WHERE NAME = '" + itemName +"'", (rs, rowNum) -> 
 		new Item(rs.getString("NAME"), rs.getDouble("PRICE"), rs.getDouble("WEIGHT")));
-		
-		
-		return itemDetails;	
+
+		return itemDetails;
 	}
 
 	@Override
@@ -65,6 +64,14 @@ public class ItemJdbcRepositoryImpl implements ItemJdbcRepository{
 			isInserted = true;
 
 		return isInserted;
+	}
+
+	@Override
+	public List<ItemSelected> getAllItemsPurchased() {
+		List<ItemSelected> itemsSelected = jdbcTemplate.query("SELECT NAME, PRICE, QUANTITY, WEIGHT, PURCHASED_DATE, MEMBER_ID FROM items_selected ", (rs, rowNum) -> 
+		new ItemSelected(rs.getString("NAME"), rs.getDouble("PRICE"), rs.getInt("QUANTITY") ,rs.getDouble("WEIGHT"), rs.getDate("PURCHASED_DATE"), rs.getString("MEMBER_ID")));
+
+		return itemsSelected;
 	}
 
 }

@@ -22,7 +22,7 @@ import com.selfpaidgrocerysystemservices.service.ItemDetailsService;
 
 @Service
 public class ItemDetailsServiceImpl implements ItemDetailsService {
-	
+
 	private static Logger logger = LoggerFactory.getLogger(ItemDetailsServiceImpl.class);
 
 	@Autowired
@@ -106,12 +106,11 @@ public class ItemDetailsServiceImpl implements ItemDetailsService {
 
 					itemsSelectedList.add(itemsSelected);
 				}
-				
+
 				JSONObject memberIdJson = (JSONObject) jsonArr.get(jsonArr.length()-1);
 				memberId = String.valueOf(memberIdJson.get("membershipId")) ;
 				logger.info("MembershipId: " + memberIdJson);
 			}
-
 
 			isInserted = itemJdbcRepository.postItemDetails(itemsSelectedList, memberId);
 			responseJsonObj.put("isInserted", isInserted);
@@ -120,6 +119,19 @@ public class ItemDetailsServiceImpl implements ItemDetailsService {
 			e.printStackTrace();
 		}	
 		return responseJsonObj;
+	}
+
+	@Override
+	public List<ItemSelected> getItemsPurchased() {
+		List<ItemSelected> itemsSelected = null;
+		try {
+			itemsSelected = itemJdbcRepository.getAllItemsPurchased();
+		} catch(SelfCheckoutException | JSONException e) {
+			e.printStackTrace();
+		} catch(Exception ex){
+			ex.printStackTrace();
+		}
+		return itemsSelected;
 	}
 
 }

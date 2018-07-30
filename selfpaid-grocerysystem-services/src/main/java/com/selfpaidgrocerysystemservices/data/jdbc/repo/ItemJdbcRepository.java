@@ -9,8 +9,9 @@ import com.selfpaidgrocerysystemservices.dto.ItemSelected;
 
 @Component
 public interface ItemJdbcRepository {
-	
+
 	public List<Item> getItemDetails(String itemName);
 	public boolean postItemDetails(List<ItemSelected> itemsSelectedList, String memberId);
+	public List<ItemSelected> getAllItemsPurchased();
 
 }

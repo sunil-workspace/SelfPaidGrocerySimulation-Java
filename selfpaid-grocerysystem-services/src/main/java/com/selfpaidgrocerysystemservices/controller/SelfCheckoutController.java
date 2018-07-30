@@ -1,8 +1,5 @@
 package com.selfpaidgrocerysystemservices.controller;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -18,10 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfWriter;
 import com.selfpaidgrocerysystemservices.dto.Payment;
 import com.selfpaidgrocerysystemservices.exceptions.SelfCheckoutException;
 import com.selfpaidgrocerysystemservices.service.GenerateReceiptService;
@@ -42,7 +35,7 @@ public class SelfCheckoutController {
 
 	@Autowired
 	PaymentDetailsService paymentDetailsService;
-	
+
 	@Autowired
 	GenerateReceiptService generateReceiptService;
 
@@ -166,12 +159,11 @@ public class SelfCheckoutController {
 		JSONObject jsonObj = new JSONObject();
 		HttpHeaders headers = new HttpHeaders();
 		try {
-
 			generateReceiptService.generateReceipt();
-			
+
 			//GenerateReceiptService
 			jsonObj.put("isReceiptGenerated", "true");
-
+			isReceiptGenerated = "true";
 
 		} catch(NumberFormatException | ClassCastException | NullPointerException e) {
 			logger.error("Exception occured while generating receipt" + e.getMessage());
