@@ -6,6 +6,9 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.decimal4j.util.DoubleRounder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.itextpdf.text.Anchor;
@@ -24,6 +27,7 @@ import com.itextpdf.text.Section;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.selfpaidgrocerysystemservices.controller.SelfCheckoutController;
 import com.selfpaidgrocerysystemservices.dto.ItemSelected;
 import com.selfpaidgrocerysystemservices.service.constants.SelfpaidConstants;
 
@@ -32,6 +36,8 @@ import com.selfpaidgrocerysystemservices.service.constants.SelfpaidConstants;
  */
 @Component
 public class PDFCreator {
+	
+	private static Logger logger = LoggerFactory.getLogger(PDFCreator.class);
 
 	/*private final static String[] HEADER_ARRAY = {"S.No.", "CompanyName", "Income", "Year"};
 	public final static Font SMALL_BOLD = new Font(Font.FontFamily.TIMES_ROMAN, 8, Font.BOLD);
@@ -236,7 +242,17 @@ public class PDFCreator {
 			document.add(paragraph);
 
 			//title1.add(title1);
+			
 			createTable(document, itemsSelected);
+			
+			addEmptyLine(paragraph, 1);
+			addEmptyLine(paragraph, 1);
+			double totalPrice = calculateTotalPriceForPdf(itemsSelected);
+			paragraph1.setSpacingBefore(10);
+			document.add(new Paragraph("                                                     Total Price: $" + totalPrice, catFont));
+
+			
+			
 			//document.add(section1);
 
 			/*PdfPTable t = new PdfPTable(3);
@@ -303,7 +319,7 @@ public class PDFCreator {
 			c1.setHorizontalAlignment(Element.ALIGN_CENTER);
 			table.addCell(c1);
 
-			c1 = new PdfPCell(new Phrase("PRICE"));
+			c1 = new PdfPCell(new Phrase("PRICE ($)"));
 			c1.setHorizontalAlignment(Element.ALIGN_CENTER);
 			table.addCell(c1);
 
@@ -311,7 +327,7 @@ public class PDFCreator {
 			c1.setHorizontalAlignment(Element.ALIGN_CENTER);
 			table.addCell(c1);
 
-			c1 = new PdfPCell(new Phrase("WEIGHT"));
+			c1 = new PdfPCell(new Phrase("WEIGHT (lb)"));
 			c1.setHorizontalAlignment(Element.ALIGN_CENTER);
 			table.addCell(c1);
 
@@ -319,11 +335,18 @@ public class PDFCreator {
 
 			for(int i=0; i<itemsSelected.size(); i++) {
 				table.addCell(itemsSelected.get(i).getNAME());
+				//table.addCell(String.valueOf(DoubleRounder.round(itemsSelected.get(i).getPRICE(), 2)));
 				table.addCell(String.valueOf(itemsSelected.get(i).getPRICE()));
 				table.addCell(String.valueOf(itemsSelected.get(i).getQUANTITY()));
 				table.addCell(String.valueOf(itemsSelected.get(i).getWEIGHT()));
 				//table.addCell(String.valueOf(itemsSelected.get(i).getMEMBER_ID()));
 			}
+			
+			/*double totalPrice = calculateTotalPriceForPdf(itemsSelected);
+			table.addCell("");
+			table.addCell("Total Price");
+			table.addCell(String.valueOf(totalPrice));
+			table.addCell("");*/
 
 			//subCatPart.add(table);
 			document.add(table);
@@ -332,12 +355,26 @@ public class PDFCreator {
 		}
 	}
 
+	private double calculateTotalPriceForPdf(java.util.List<ItemSelected> itemsSelected) {
+		double totalPrice = 0.0;
+		try{
+			for(ItemSelected itemSelected: itemsSelected) {
+				totalPrice = totalPrice + itemSelected.getPRICE();
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		logger.info("Total Price: $" + totalPrice);
+		return DoubleRounder.round(totalPrice, 2);
+	}
+
 	private static void createList(Section subCatPart) {
 		List list = new List(true, false, 10);
 		list.add(new ListItem("First point"));
 		subCatPart.add(list);
 	}
 
+	
 	private static void addEmptyLine(Paragraph paragraph, int number) {
 		for (int i = 0; i < number; i++) {
 			paragraph.add(new Paragraph(" "));

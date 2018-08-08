@@ -10,7 +10,7 @@ import com.selfpaidgrocerysystemservices.dto.ItemSelected;
 @Service
 public interface ItemDetailsService {
 
-	public JSONObject getItemDetailsFromDB(String itemName);
+	public JSONObject getItemDetailsFromDB(String itemName, String memberId);
 	public JSONObject postItemDetailsToDB(String itemsDetails);
 	public List<ItemSelected> getItemsPurchased();
 

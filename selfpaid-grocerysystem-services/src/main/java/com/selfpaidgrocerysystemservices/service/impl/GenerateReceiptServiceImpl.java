@@ -59,7 +59,7 @@ public class GenerateReceiptServiceImpl implements GenerateReceiptService {
 			java.util.List<ItemSelected> itemsSelected = itemDetailsServiceImpl.getItemsPurchased();
 			logger.info("items: " + itemsSelected.size());
 
-			Path path = Paths.get(ClassLoader.getSystemResource("receipt_logo.png").toURI());
+			//Path path = Paths.get(ClassLoader.getSystemResource("receipt_logo.png").toURI());
 
 			//document = new Document();
 			

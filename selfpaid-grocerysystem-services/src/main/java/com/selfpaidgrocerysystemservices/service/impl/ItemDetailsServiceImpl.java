@@ -1,5 +1,7 @@
 package com.selfpaidgrocerysystemservices.service.impl;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -48,7 +50,7 @@ public class ItemDetailsServiceImpl implements ItemDetailsService {
 	}*/
 
 	@Override
-	public JSONObject getItemDetailsFromDB(String itemName) {
+	public JSONObject getItemDetailsFromDB(String itemName, String memberId) {
 		JSONObject jsonObj = new JSONObject();
 		try {
 			List<Item> items = itemJdbcRepository.getItemDetails(itemName);
@@ -57,7 +59,16 @@ public class ItemDetailsServiceImpl implements ItemDetailsService {
 				Item item = items.get(0);
 
 				jsonObj.put("NAME", item.getName());
-				jsonObj.put("PRICE", item.getPrice());
+
+				if(memberId != null && !"".equals(memberId) && !"Guest".equals(memberId)) {
+					double itemPrice =  item.getPrice();
+					itemPrice = itemPrice*0.9;
+					jsonObj.put("PRICE", new BigDecimal(itemPrice).setScale(2,RoundingMode.HALF_UP).doubleValue() );
+				} else {
+					jsonObj.put("PRICE", item.getPrice());
+				}
+
+
 				jsonObj.put("QUANTITY", 1);
 				jsonObj.put("WEIGHT", item.getWeight());
 			}
@@ -74,6 +85,7 @@ public class ItemDetailsServiceImpl implements ItemDetailsService {
 		JSONObject responseJsonObj = new JSONObject();
 		boolean isInserted = false;
 		String memberId = "";
+		Double weight = 0.0;
 		try {
 			JSONArray jsonArr = new JSONArray(itemsDetails);
 			//JSONArray jsonArr = (JSONArray) jsonObj.get("itemDetails");
@@ -96,7 +108,13 @@ public class ItemDetailsServiceImpl implements ItemDetailsService {
 					int quantity =  (int) itemDetails.get("QUANTITY");;
 					itemsSelected.setQUANTITY(quantity);
 
-					Double weight = (Double) itemDetails.get("WEIGHT");
+					if(itemDetails.get("WEIGHT") instanceof Integer) {
+						Integer weightInInteger = (Integer) itemDetails.get("WEIGHT");
+						weight = Double.parseDouble(String.valueOf(weightInInteger));
+					} else if(itemDetails.get("WEIGHT") instanceof Double) {
+						weight = (Double) itemDetails.get("WEIGHT");
+					}
+
 					itemsSelected.setWEIGHT(weight);
 
 					java.sql.Date currentSqlDate = new java.sql.Date(Calendar.getInstance().getTime().getTime());

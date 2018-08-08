@@ -47,8 +47,13 @@ public class SelfCheckoutController {
 		logger.info("Item Received: " + itemName);
 		JSONObject jsonObj = new JSONObject();
 		HttpHeaders headers = new HttpHeaders();
+		String memberId = "";
 		try {
-			jsonObj = itemDetailsService.getItemDetailsFromDB(itemName);
+			String[] itemNameMemberId = itemName.split("-");
+			itemName = itemNameMemberId[0];
+			memberId = itemNameMemberId[1];
+			
+			jsonObj = itemDetailsService.getItemDetailsFromDB(itemName, memberId);
 			logger.info("Response Json: " + jsonObj);
 		} catch (SelfCheckoutException e) {
 			e.printStackTrace();

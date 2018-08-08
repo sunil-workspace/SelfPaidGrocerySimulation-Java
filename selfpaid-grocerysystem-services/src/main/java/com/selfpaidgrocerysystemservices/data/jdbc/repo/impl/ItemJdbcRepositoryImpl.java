@@ -36,6 +36,10 @@ public class ItemJdbcRepositoryImpl implements ItemJdbcRepository {
 		boolean isInserted = false;
 		int response[]  = {};
 		try {
+			
+			String deleteSql = "Delete from items_selected";
+			jdbcTemplate.execute(deleteSql);
+			
 			String insertSql = "INSERT INTO ITEMS_SELECTED (NAME, PRICE, QUANTITY, WEIGHT, PURCHASED_DATE, MEMBER_ID) VALUES (?, ?, ?, ?, ?, ?)";
 
 			response  = jdbcTemplate.batchUpdate(insertSql, new BatchPreparedStatementSetter() {
